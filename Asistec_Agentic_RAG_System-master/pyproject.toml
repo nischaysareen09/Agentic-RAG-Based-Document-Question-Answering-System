@@ -1,0 +1,45 @@
+[project]
+name = "rag-chatbot"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi>=0.115.12",
+    "google-generativeai>=0.8.5",
+    "ipykernel>=6.29.5",
+    "langchain>=0.3.25",
+    "langchain-community>=0.3.24",
+    "langchain-google-vertexai>=2.0.24",
+    "langchain-pinecone>=0.2.6",
+    "langchain-text-splitters>=0.3.8",
+    "langgraph>=0.4.7",
+    "langgraph-cli[inmem]>=0.2.10",
+    "langmem>=0.0.26",
+    "mem0ai>=0.1.101",
+    "pdfplumber>=0.11.6",
+    "pinecone-text>=0.5.4",
+    "psycopg2>=2.9.10",
+    "pydantic[email]>=2.11.5",
+    "pypdf>=5.5.0",
+    "python-dotenv>=1.1.0",
+    "python-multipart>=0.0.20",
+    "sqlmodel>=0.0.24",
+]
+
+
+[project.optional-dependencies]
+dev = ["mypy>=1.11.1", "ruff>=0.6.1"]
+
+[build-system]
+requires = ["setuptools>=73.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["agentic_rag"]
+[tool.setuptools.package-dir]
+"agentic_rag" = "workflow"
+
+
+[tool.setuptools.package-data]
+"*" = ["py.typed"]
